@@ -9,4 +9,5 @@ def fizzbuzz():
             continue
         elif i % 3 == 0:
             print('Fizz ', end='')
+            continue
         print('{:d} '.format(i), end='')
