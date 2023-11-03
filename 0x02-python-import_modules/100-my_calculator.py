@@ -3,7 +3,7 @@ import sys
 from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
     nbr_args = len(sys.argv)
-    if nbr_args != 4 :
+    if nbr_args != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
     else:
@@ -24,4 +24,3 @@ if __name__ == "__main__":
             else:
                 result = div(a, b)
             print("{:d} {:s} {:d} = {:d}".format(a, operator, b, result))
-
