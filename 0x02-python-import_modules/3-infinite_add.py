@@ -6,4 +6,3 @@ if __name__ == "__main__":
         _sum_ += int(argv[i])
     if abs(_sum_) <= maxsize:
         print("{}".format(_sum_))
-
