@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
 	int *array, size, i = 0, last;
 	listint_t *tmp;
 
-	if (*head == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 	tmp = *head;
 	size = lenght_list(*head);
