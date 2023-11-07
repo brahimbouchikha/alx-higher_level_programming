@@ -29,12 +29,11 @@ middle = ptr;
 slow = slow->next;
 }
 free(ptr);
-ptr = middle;
+ptr = middle->next;
 while (ptr != NULL)
 {
 if (tmp->n != ptr->n)
 {
-free(ptr);
 return (0);
 }
 ptr = ptr->next;
