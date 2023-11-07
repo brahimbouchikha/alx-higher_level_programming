@@ -1,26 +1,6 @@
 #include "lists.h"
 
 /**
- * lenght_list - return lenght list
- * @head: list to calculate the lenght
- *
- * Return: lenght of the list
- */
-
-int lenght_list(listint_t *head)
-{
-	int count = 0;
-	listint_t *tmp = head;
-
-	while (tmp != NULL)
-	{
-		count++;
-		tmp = tmp->next;
-	}
-	return (count);
-}
-
-/**
  * is_palindrome - checks if a singly linked list is a palindrome
  * @head: the list to check
  *
@@ -29,34 +9,36 @@ int lenght_list(listint_t *head)
 
 int is_palindrome(listint_t **head)
 {
-	int *array, size, i = 0, last;
-	listint_t *tmp;
+listint_t *tmp = *head;
+listint_t *fast = *head;
+listint_t *slow = *head;
+listint_t *middle = NULL, *ptr;
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
-	tmp = *head;
-	size = lenght_list(*head);
-	array = malloc(sizeof(int) * size);
-	if (array == NULL)
-	{
-		return (0);
-	}
-	while (tmp != NULL)
-	{
-		array[i] = tmp->n;
-		i++;
-		tmp = tmp->next;
-	}
-	for (i = 0; i < size / 2; i++)
-	{
-		last = (size - 1) - i;
-		if (array[i] != array[last])
-		{
-			free(array);
-			return (0);
-		}
-	}
-	free(array);
-	return (1);
-
+while (fast->next && fast->next->next)
+{
+fast = fast->next->next;
+slow = slow->next;
+}
+/* copy main Linked list to middle "*/
+while (slow != NULL)
+{
+ptr = malloc(sizeof(listint_t));
+ptr->next = middle;
+ptr->n = slow->n;
+middle = ptr;
+slow = slow->next;
+}
+free(ptr);
+ptr = middle;
+while (ptr != NULL)
+{
+if (tmp->n != ptr->n)
+{
+free(ptr);
+return (0);
+}
+ptr = ptr->next;
+tmp = tmp->next;
+}
+return (1);
 }
