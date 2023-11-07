@@ -14,6 +14,8 @@ listint_t *fast = *head;
 listint_t *slow = *head;
 listint_t *middle = NULL, *ptr;
 
+if (*head == NULL || (*head)->next == NULL)
+return (1);
 while (fast->next && fast->next->next)
 {
 fast = fast->next->next;
