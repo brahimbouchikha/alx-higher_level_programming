@@ -7,13 +7,13 @@
 
 void freelist(listint_t *head)
 {
-	listint_t *tmp;
+	listint_t *tmp = head, *ptr;
 
-	while(head)
+	while(tmp)
 	{
-		tmp = head;
-		free(tmp);
-		head = head->next;
+		ptr = tmp;
+		tmp = tmp->next;
+		free(ptr);
 	}
 }
 /**
@@ -55,9 +55,13 @@ int is_palindrome(listint_t **head)
 	while (ptr1 != NULL)
 	{
 		if (tmp->n != ptr1->n)
+		{
+			freelist(ptr);
 			return (0);
+		}
 		ptr1 = ptr1->next;
 		tmp = tmp->next;
 	}
+	freelist(ptr);
 	return (1);
 }
