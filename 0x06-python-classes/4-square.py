@@ -39,7 +39,7 @@ class Square:
         set size to Square
 
         Args:
-            Value: size value
+            value: size value
 
         Raises:
             TypeError: if size is not an integer
