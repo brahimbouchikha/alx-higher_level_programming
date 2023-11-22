@@ -29,23 +29,16 @@ class Square:
 
     @property
     def size(self):
-        """ Return the size of square."""
+        """ Property for the size of this square.
+        Raises:
+            TypeError: if size is not an integer
+            ValueError: if size is less than 0
+        """
 
         return self.__size
 
     @size.setter
     def size(self, value):
-        """
-        set size to Square
-
-        Args:
-            value: size value
-
-        Raises:
-            TypeError: if size is not an integer
-            ValueError: if size is less than 0
-
-        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
