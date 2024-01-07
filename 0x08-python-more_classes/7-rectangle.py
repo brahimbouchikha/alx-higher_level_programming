@@ -48,10 +48,11 @@ class Rectangle:
     def __str__(self):
         total = ""
         for i in range(self.__height):
-            try:
-                total += str(self.print_symbol)
-            except Exception:
-                total += type(self).print_symbol
+            for j in range(self.__width):
+                try:
+                    total += str(self.print_symbol)
+                except Exception:
+                    total += type(self).print_symbol
             if i is not self.__height - 1:
                 total += "\n"
         return total
