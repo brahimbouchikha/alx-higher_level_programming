@@ -47,8 +47,6 @@ class Rectangle:
 
     def __str__(self):
         total = ""
-        if self.__height == 0 or self.__width == 0:
-            return total
         for i in range(self.__height):
             try:
                 total += str(self.print_symbol)
