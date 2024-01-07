@@ -7,7 +7,7 @@ This module provides a Rectangle class.
 
 class Rectangle:
     """A Rectangle class with attributes width and height,
-    and methode area and permiter, print, str, and repr. 
+    and methode area and permiter, print, str, and repr.
     """
 
     def __init__(self, width=0, height=0):
