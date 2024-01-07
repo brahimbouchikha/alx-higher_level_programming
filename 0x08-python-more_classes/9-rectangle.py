@@ -11,8 +11,7 @@ class Rectangle:
     class attribute number_of_instances that keep track
     of number of instance, class attribute print_symbol that is used
     as symbol for printing, static method bigger_or_equal the compare
-    2 rectangle and return the biggest one and class method square
-    that returns a new Rectangle.
+    2 rectangle and return the biggest one.
     """
 
     number_of_instances = 0
@@ -57,10 +56,6 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size):
-        return Rectangle(size, size)
 
     def __str__(self):
         total = ""
