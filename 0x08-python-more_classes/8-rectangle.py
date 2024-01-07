@@ -59,7 +59,7 @@ class Rectangle:
             return rect_2
 
     @classmethod
-    def square(cls, size):
+    def square(cls, size = 0):
         return Rectangle(size, size)
 
     def __str__(self):
