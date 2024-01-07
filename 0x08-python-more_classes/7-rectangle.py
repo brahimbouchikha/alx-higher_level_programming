@@ -51,7 +51,7 @@ class Rectangle:
             return total
         for i in range(self.__height):
             try:
-                total +=str(self.print_symbol)
+                total += str(self.print_symbol)
             except Exception:
                 total += type(self.print_symbol)
             if i is not self.__height - 1:
