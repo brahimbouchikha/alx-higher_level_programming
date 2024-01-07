@@ -49,7 +49,7 @@ class Rectangle:
         return total
 
     def __repr__(self):
-        print("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def area(self):
         return self.__width * self.height
