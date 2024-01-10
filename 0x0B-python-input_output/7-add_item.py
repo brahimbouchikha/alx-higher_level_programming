@@ -10,7 +10,7 @@ argslist = list(sys.argv[1:])
 try:
     old_data = load_from_file('add_item.json')
 except Exception:
-    old_data = list()
+    old_data = []
 
 old_data.extend(argslist)
 savetofile(olddata, 'add_item.json')
