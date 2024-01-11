@@ -7,4 +7,4 @@ def class_to_json(obj):
     """Returns the dictionary description
     with simple data strcuture.
     """
-    return {'name': obj.name, 'number': obj.number}
+    return obj.__dict__
