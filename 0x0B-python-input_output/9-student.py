@@ -12,4 +12,4 @@ class Student:
         self.age = age
 
     def to_json(self):
-        return slef.__dic__
+        return self.__dic__
