@@ -19,7 +19,7 @@ class Student:
         """
         try:
             for attr in attrs:
-                if is not isinstance(attr, str):
+                if type(attr) is not str:
                     return self.__dict__
         except Exeception:
             return self.__dict__
