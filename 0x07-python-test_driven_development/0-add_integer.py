@@ -4,7 +4,8 @@
 
 def add_integer(a, b=98):
     """ Add 2 integers
-    
+
+
     Args:
         a: the first integer.
         b: the seconde integer, default 98.
@@ -25,5 +26,5 @@ def add_integer(a, b=98):
     return a_as_int + b_as_int
 
 if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/0-add_integers.txt")
+        import doctest
+        doctest.testfile("tests/0-add_integers.txt")
