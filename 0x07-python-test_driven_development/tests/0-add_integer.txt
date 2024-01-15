@@ -1,0 +1,102 @@
+The ``0-add_integer`` module
+============================
+
+using ``add_integer``
+--------------------
+
+Import functuon from module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test one int argument:
+
+	>>> add_integer(3)
+	101
+
+Test argument that equal to 0
+
+	>>> add_integer(0)
+	98
+
+Test one float argument
+
+	>>> add_integer(12.9)
+	110
+
+Test negative int argument 
+
+	>>> add_integer(-10)
+	88
+
+Test negative float argument
+
+	>>> add_integer(-10.8)
+	88
+
+Test two integer
+
+	>>> add_integer(5, 3)
+	8
+
+Test tow positive bigg integers
+
+	>>> add_integers(6776689, 787788780)
+	794565469
+
+Test postive, negative bigg integrs
+
+	>>> add_integer(47764, -7817271)
+	-7769507
+
+Test two float
+
+	>>> add_integer(-5, -10)
+	-15
+
+Add infinity:
+
+    >>> add_integer(float('inf'), float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+Add nan:
+
+    >>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+Test first arg invalid:
+
+    >>> add_integer("foo", 0)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test second arg invalid:
+
+    >>> add_integer(123123, [])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Test both args invalid:
+
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test two strings:
+
+    >>> add_integer("foo", "bar")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test float overflow:
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+    
+	
