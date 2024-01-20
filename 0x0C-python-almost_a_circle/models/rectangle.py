@@ -77,22 +77,23 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".\
                format(type(self).__name__, self.id, self.x, self.y, self.width,
                       self.height)
+
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''Methode that hande update attributes via args.'''
         if id is not None:
-            self.id=id
+            self.id = id
 
         if width is not None:
-            self.width=width
+            self.width = width
 
         if height is not None:
-            self.height=height
+            self.height = height
 
         if x is not None:
-            self.x=x
+            self.x = x
 
         if y is not None:
-            self.y=y
+            self.y = y
 
     def update(self, *args):
         '''Update instance attribute.'''
