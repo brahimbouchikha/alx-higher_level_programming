@@ -69,4 +69,4 @@ class Rectangle(Base):
 
     def display(self):
         '''Print in stdout the rectangle with #.'''
-        print(("#" * self.__width + "\n") * self.__height,end="")
+        print(("#" * self.__width + "\n") * self.__height, end="")
