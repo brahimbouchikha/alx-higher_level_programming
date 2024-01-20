@@ -54,10 +54,6 @@ class Rectangle(Base):
         self.validate_value("y", value, True)
         self.__y = value
 
-    def area(self):
-        '''Methode that calcule the area.'''
-        return self.__width * self.__height
-
     def validate_value(self, name, value, under=True):
         '''Methode to validate the value.'''
         if not isinstance(value, int):
@@ -66,3 +62,11 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
         elif under and value < 0:
             raise ValueError("{} must be >= 0".format(name))
+
+    def area(self):
+        '''Methode that calcule the area.'''
+        return self.__width * self.__height
+
+    def display(self):
+        '''Print in stdout the rectangle with #.'''
+        print(("#" * self.__width + "\n") * self.__height,end="")
