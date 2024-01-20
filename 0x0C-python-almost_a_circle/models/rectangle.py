@@ -73,7 +73,7 @@ class Rectangle(Base):
               * self.__height, end="")
 
     def __str__(self):
-        '''Returns srting info about this triange'''
+        '''Returns srting info about this triange.'''
         return "[{}] ({}) {}/{} - {}/{}".\
                format(type(self).__name__, self.id, self.x, self.y, self.width,
                       self.height)
